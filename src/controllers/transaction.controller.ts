@@ -24,7 +24,9 @@ export const createTransaction = async (
     };
 
     if (!user_id) {
-      res.status(400).json({ success: false, message: "user_id is required" });
+      res
+        .status(400)
+        .json({ success: false, message: "user_id is required" });
       return;
     }
     if (!items || !Array.isArray(items) || items.length === 0) {
